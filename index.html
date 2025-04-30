@@ -1007,5 +1007,58 @@
             contactForm.reset();
         });
     </script>
+                <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDXtyFUKkJ8d3Ziwt9AiO6Y7VPrPTMC1e8",
+    authDomain: "bookapp-a1770.firebaseapp.com",
+    projectId: "bookapp-a1770",
+    storageBucket: "bookapp-a1770.firebasestorage.app",
+    messagingSenderId: "1006747061612",
+    appId: "1:1006747061612:web:a8dcb3ba671d5d74553749"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+<form id="contactForm">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<p id="form-status"></p>
+<script>
+  const contactForm = document.getElementById('contactForm');
+  const status = document.getElementById('form-status');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = contactForm.name.value;
+    const email = contactForm.email.value;
+    const message = contactForm.message.value;
+
+    try {
+      await db.collection("contacts").add({
+        name,
+        email,
+        message,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      status.textContent = "✅ Message sent successfully!";
+      contactForm.reset();
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      status.textContent = "❌ Failed to send message. Try again later.";
+    }
+  });
+</script>
 </body>
 </html>
