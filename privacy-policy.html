@@ -1,0 +1,206 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | CoolBrain Studio</title>
+    <meta name="description" content="Read the Privacy Policy for CoolBrain Studio to understand how we collect, use, and protect your personal information.">
+    <meta name="keywords" content="privacy policy, CoolBrain Studio, data protection, Sohaib">
+    <meta name="author" content="Sohaib">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.coolbrainstudio.com/privacy-policy.html">
+    <meta property="og:title" content="Privacy Policy | CoolBrain Studio">
+    <meta property="og:description" content="Learn how CoolBrain Studio handles your personal information in our Privacy Policy.">
+    <meta property="og:image" content="https://www.coolbrainstudio.com/images/profile-img.jpg">
+    <meta property="og:url" content="https://www.coolbrainstudio.com/privacy-policy.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | CoolBrain Studio">
+    <meta name="twitter:description" content="Learn how CoolBrain Studio handles your personal information in our Privacy Policy.">
+    <meta name="twitter:image" content="https://www.coolbrainstudio.com/images/profile-img.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00a3ff;
+            --primary-dark: #0066ff;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --light: #f0f0f0;
+            --lighter: #ffffff;
+            --glass: rgba(15, 15, 20, 0.5);
+            --transition: all 0.3s ease;
+        }
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: var(--darker);
+            padding: 30px 0;
+            text-align: center;
+        }
+        .footer-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-text span {
+            color: var(--primary);
+        }
+        .footer-links {
+            margin-top: 15px;
+        }
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="card">
+                <h1>Privacy Policy</h1>
+                <p>Last updated: July 2, 2025</p>
+                <p>At CoolBrain Studio, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or use our services.</p>
+                <h2>Information We Collect</h2>
+                <p>We may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Information</strong>: Name and email address provided through our contact form.</li>
+                    <li><strong>Non-Personal Information</strong>: Browser type, IP address, and website usage data collected via cookies or analytics tools.</li>
+                </ul>
+                <h2>How We Use Your Information</h2>
+                <p>Your information is used to:</p>
+                <ul>
+                    <li>Respond to inquiries submitted through our contact form.</li>
+                    <li>Improve our website and services based on usage analytics.</li>
+                    <li>Communicate with you about our services or updates.</li>
+                </ul>
+                <h2>Data Sharing</h2>
+                <p>We do not sell or share your personal information with third parties, except:</p>
+                <ul>
+                    <li>With service providers (e.g., Formspree for contact form submissions) to facilitate our services.</li>
+                    <li>If required by law or to protect our rights.</li>
+                </ul>
+                <h2>Cookies</h2>
+                <p>Our website may use cookies to enhance your experience. You can disable cookies in your browser settings, but this may affect site functionality.</p>
+                <h2>Data Security</h2>
+                <p>We implement reasonable security measures to protect your data, but no method is 100% secure. Please contact us if you have concerns about your data’s security.</p>
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Request access to your personal data.</li>
+                    <li>Request correction or deletion of your data.</li>
+                    <li>Opt-out of communications at any time.</li>
+                </ul>
+                <h2>Contact Us</h2>
+                <p>For questions about this Privacy Policy, please contact us via the <a href="/#contact">contact form</a>.</p>
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy periodically. Changes will be posted on this page with an updated date.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 <span>Sohaib</span> – CoolBrain Studio. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/">Home</a> |
+                <a href="/privacy-policy.html">Privacy Policy</a> |
+                <a href="/dmca.html">DMCA Notice</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
