@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoolBrain Studio | Digital Content Creator</title>
+    <title>CoolBrain Studio | Thumbnail, Logo & Video Editing Services</title>
+    <meta name="description" content="CoolBrain Studio offers professional thumbnail design, logo creation, and short video editing services for creators and businesses. Contact Sohaib for custom visual content to boost your brand.">
+    <meta name="keywords" content="thumbnail design, logo design, video editing, YouTube thumbnails, short video editor, graphic design, CoolBrain Studio, Sohaib">
+    <meta name="author" content="Sohaib">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.coolbrainstudio.com">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="CoolBrain Studio | Thumbnail, Logo & Video Editing Services">
+    <meta property="og:description" content="Professional thumbnail design, logo creation, and short video editing by Sohaib at CoolBrain Studio. Elevate your brand with custom visual content.">
+    <meta property="og:image" content="https://www.coolbrainstudio.com/images/profile-img.jpg">
+    <meta property="og:url" content="https://www.coolbrainstudio.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CoolBrain Studio | Thumbnail, Logo & Video Editing Services">
+    <meta name="twitter:description" content="Professional thumbnail design, logo creation, and short video editing by Sohaib at CoolBrain Studio.">
+    <meta name="twitter:image" content="https://www.coolbrainstudio.com/images/profile-img.jpg">
+    <!-- Fonts (optimized with font-display) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "CoolBrain Studio",
+        "url": "https://www.coolbrainstudio.com",
+        "description": "CoolBrain Studio provides thumbnail design, logo creation, and short video editing services for creators and businesses.",
+        "creator": {
+            "@type": "Person",
+            "name": "Sohaib",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "West Bengal",
+                "addressCountry": "India"
+            }
+        },
+        "sameAs": [
+            "https://www.youtube.com/@coolbrainboy",
+            "https://www.youtube.com/@The_SecretShadow",
+            "https://www.youtube.com/@PrimeNext"
+        ]
+    }
+    </script>
     <style>
         :root {
             --primary: #00a3ff;
@@ -19,38 +60,28 @@
             --glass: rgba(15, 15, 20, 0.5);
             --transition: all 0.3s ease;
         }
-
-        /* Prevent text selection */
         body {
-            -webkit-user-select: none; /* Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE/Edge */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             user-select: none;
-        }
-
-        /* Allow selection in form fields */
-        input, textarea {
-            -webkit-user-select: text !important;
-            -moz-user-select: text !important;
-            -ms-user-select: text !important;
-            user-select: text !important;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--dark);
             color: var(--light);
             overflow-x: hidden;
             line-height: 1.6;
         }
-
-        /* Particles Background */
+        input, textarea {
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+            user-select: text !important;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         #particles-js {
             position: fixed;
             width: 100%;
@@ -60,53 +91,41 @@
             z-index: -1;
             pointer-events: none;
         }
-
-        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-
         ::-webkit-scrollbar-track {
             background: var(--darker);
         }
-
         ::-webkit-scrollbar-thumb {
             background: var(--primary);
             border-radius: 4px;
         }
-
         ::-webkit-scrollbar-thumb:hover {
             background: var(--primary-dark);
         }
-
-        /* General Styles */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         section {
             padding: 80px 0;
         }
-
         h1, h2, h3, h4 {
             font-weight: 600;
             line-height: 1.2;
         }
-
         h1 {
             font-size: 3.5rem;
         }
-
         h2 {
             font-size: 2.5rem;
             margin-bottom: 40px;
             position: relative;
             display: inline-block;
         }
-
         h2::after {
             content: '';
             position: absolute;
@@ -117,18 +136,14 @@
             background: var(--primary);
             border-radius: 3px;
         }
-
         p {
             font-weight: 300;
             font-size: 1rem;
         }
-
         img {
             max-width: 100%;
             height: auto;
         }
-
-        /* Glassmorphism Card */
         .card {
             background: var(--glass);
             backdrop-filter: blur(10px);
@@ -139,14 +154,11 @@
             transition: var(--transition);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 163, 255, 0.2);
             border-color: rgba(0, 163, 255, 0.3);
         }
-
-        /* Buttons */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -162,7 +174,6 @@
             overflow: hidden;
             z-index: 1;
         }
-
         .btn::before {
             content: '';
             position: absolute;
@@ -174,34 +185,27 @@
             transition: 0.5s;
             z-index: -1;
         }
-
         .btn:hover {
             color: var(--lighter);
             border-color: var(--primary-dark);
             box-shadow: 0 0 15px var(--primary);
         }
-
         .btn:hover::before {
             left: 100%;
         }
-
         .btn-primary {
             background: var(--primary);
             color: var(--darker);
         }
-
         .btn-primary:hover {
             background: var(--primary-dark);
             color: var(--lighter);
         }
-
         .btn-group {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
-
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -211,36 +215,30 @@
             z-index: 1000;
             transition: var(--transition);
         }
-
         header.scrolled {
             background: rgba(10, 10, 10, 0.9);
             backdrop-filter: blur(10px);
             padding: 15px 0;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
-
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--lighter);
             text-decoration: none;
         }
-
         .logo span {
             color: var(--primary);
         }
-
         .nav-links {
             display: flex;
             gap: 30px;
         }
-
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -249,7 +247,6 @@
             transition: var(--transition);
             position: relative;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -260,23 +257,18 @@
             background: var(--primary);
             transition: var(--transition);
         }
-
         .nav-links a:hover {
             color: var(--primary);
         }
-
         .nav-links a:hover::after {
             width: 100%;
         }
-
         .hamburger {
             display: none;
             cursor: pointer;
             font-size: 1.5rem;
             color: var(--light);
         }
-
-        /* Hero Section */
         #hero {
             height: 100vh;
             display: flex;
@@ -284,23 +276,19 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero-content {
             display: flex;
             align-items: center;
             gap: 50px;
         }
-
         .hero-text {
             flex: 1;
         }
-
         .hero-image {
             flex: 1;
             display: flex;
             justify-content: center;
         }
-
         .profile-img {
             width: 350px;
             height: 350px;
@@ -310,69 +298,55 @@
             box-shadow: 0 0 30px var(--primary);
             animation: float 6s ease-in-out infinite;
         }
-
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0px); }
         }
-
         .hero-title {
             font-size: 3.5rem;
             margin-bottom: 15px;
             line-height: 1.2;
         }
-
         .hero-title span {
             color: var(--primary);
         }
-
         .hero-subtitle {
             font-size: 1.5rem;
             margin-bottom: 20px;
             color: var(--primary);
         }
-
         .hero-description {
             margin-bottom: 30px;
             max-width: 600px;
         }
-
-        /* About Section */
         .about-content {
             display: flex;
             gap: 50px;
             align-items: center;
         }
-
         .about-text {
             flex: 1;
         }
-
         .about-cards {
             flex: 1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
-
         .about-card {
             text-align: center;
             padding: 30px 20px;
         }
-
         .about-card i {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 15px;
         }
-
         .about-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
-
-        /* Video Section */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -381,7 +355,6 @@
             border-radius: 12px;
             margin-bottom: 30px;
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -390,21 +363,17 @@
             height: 100%;
             border: none;
         }
-
-        /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-
         .skill-card {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-
         .skill-icon {
             width: 80px;
             height: 80px;
@@ -418,32 +387,27 @@
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-
         .skill-card h3 {
             margin-bottom: 10px;
         }
-
-        /* Projects Section */
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
         .project-card {
             position: relative;
             border-radius: 12px;
             overflow: hidden;
             height: 250px;
         }
-
         .project-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
+            loading: lazy;
         }
-
         .project-overlay {
             position: absolute;
             bottom: -100%;
@@ -453,23 +417,18 @@
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
             transition: var(--transition);
         }
-
         .project-card:hover .project-overlay {
             bottom: 0;
         }
-
         .project-card:hover .project-img {
             transform: scale(1.05);
         }
-
-        /* Presence Section */
         .presence-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
         }
-
         .presence-card {
             display: flex;
             align-items: center;
@@ -477,22 +436,17 @@
             padding: 15px 25px;
             min-width: 250px;
         }
-
         .presence-card i {
             font-size: 2rem;
             color: var(--primary);
         }
-
-        /* Contact Section */
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
         }
-
         .form-group {
             margin-bottom: 20px;
         }
-
         .form-control {
             width: 100%;
             padding: 15px;
@@ -503,18 +457,15 @@
             font-family: 'Poppins', sans-serif;
             transition: var(--transition);
         }
-
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 10px rgba(0, 163, 255, 0.3);
         }
-
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
-
         .success-message {
             display: none;
             text-align: center;
@@ -525,29 +476,34 @@
             margin-top: 20px;
             animation: fadeIn 0.5s ease;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Footer */
         footer {
             background: var(--darker);
             padding: 30px 0;
             text-align: center;
         }
-
         .footer-text {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.6);
         }
-
         .footer-text span {
             color: var(--primary);
         }
-
-        /* Back to Top Button */
+        .footer-links {
+            margin-top: 15px;
+        }
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -567,52 +523,41 @@
             transition: var(--transition);
             z-index: 999;
         }
-
         .back-to-top.active {
             opacity: 1;
             visibility: visible;
         }
-
         .back-to-top:hover {
             background: var(--primary-dark);
             color: var(--lighter);
             transform: translateY(-5px);
             box-shadow: 0 0 15px var(--primary);
         }
-
-        /* Responsive Styles */
         @media (max-width: 992px) {
             h1 {
                 font-size: 2.8rem;
             }
-
             h2 {
                 font-size: 2rem;
             }
-
             .hero-content {
                 flex-direction: column-reverse;
                 text-align: center;
             }
-
             .hero-text {
                 margin-top: 50px;
             }
-
             .btn-group {
                 justify-content: center;
             }
-
             .about-content {
                 flex-direction: column;
             }
-
             .profile-img {
                 width: 250px;
                 height: 250px;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
@@ -627,43 +572,34 @@
                 gap: 40px;
                 transition: var(--transition);
             }
-
             .nav-links.active {
                 left: 0;
             }
-
             .hamburger {
                 display: block;
             }
-
             .about-cards {
                 grid-template-columns: 1fr;
             }
-
             .hero-title {
                 font-size: 2.5rem;
             }
-
             .hero-subtitle {
                 font-size: 1.2rem;
             }
         }
-
         @media (max-width: 576px) {
             section {
                 padding: 60px 0;
             }
-
             .btn-group {
                 flex-direction: column;
                 width: 100%;
             }
-
             .btn {
                 width: 100%;
                 text-align: center;
             }
-
             .hero-title {
                 font-size: 2rem;
             }
@@ -671,13 +607,10 @@
     </style>
 </head>
 <body>
-    <!-- Particles Background -->
     <div id="particles-js"></div>
-
-    <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">Cool<span>Brain</span> Studio</a>
+            <a href="/" class="logo">Cool<span>Brain</span> Studio</a>
             <nav>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
@@ -685,278 +618,255 @@
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#video">Work</a></li>
+                    <li><a href="#video">Work Samples</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#presence">Presence</a></li>
+                    <li><a href="#presence">Online Presence</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Hey, I'm <span>Sohaib</span></h1>
-                    <h2 class="hero-subtitle">I create content for creators 📸</h2>
-                    <p class="hero-description">Owner of CoolBrainBoy, PrimeNext, Secret Shadow | Helping creators grow with editing, thumbnails, and logos.</p>
-                    <div class="btn-group">
-                        <a href="#contact" class="btn btn-primary">Let's Talk 💬</a>
-                        <a href="https://docs.google.com/document/d/1ThsUpR0hoMemO4qZS7R-Lw1spuZ_zCjQ/edit?usp=drive_link&ouid=117863462903110551223&rtpof=true&sd=true" class="btn">See Resume</a>
+    <main>
+        <section id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="hero-title" class="hero-title">Hey, I'm <span>Sohaib</span></h1>
+                        <h2 class="hero-subtitle">I create content for creators 📸</h2>
+                        <p class="hero-description">Owner of CoolBrainBoy, PrimeNext, Secret Shadow | Helping creators grow with editing, thumbnails, and logos.</p>
+                        <div class="btn-group">
+                            <a href="#contact" class="btn btn-primary">Let's Talk 💬</a>
+                            <a href="https://docs.google.com/document/d/1ThsUpR0hoMemO4qZS7R-Lw1spuZ_zCjQ/edit?usp=drive_link&ouid=117863462903110551223&rtpof=true&sd=true" class="btn" rel="noopener noreferrer">See Resume</a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="ChatGPT Image May 2, 2025, 05_03_10 PM.png" alt="Sohaib Profile" class="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text card">
-                    <p>Self-taught video editor and designer helping influencers and YouTubers build strong visual content through thumbnails, videos, logos and websites like this.</p>
-                </div>
-                <div class="about-cards">
-                    <div class="about-card card">
-                        <i class="fas fa-birthday-cake"></i>
-                        <h3>Age</h3>
-                        <p>17</p>
-                    </div>
-                    <div class="about-card card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>West Bengal, India</p>
-                    </div>
-                    <div class="about-card card">
-                        <i class="fas fa-heart"></i>
-                        <h3>Interests</h3>
-                        <p>Editing | Designing | Music | Gaming | Websites</p>
-                    </div>
-                    <div class="about-card card">
-                        <i class="fas fa-star"></i>
-                        <h3>Experience</h3>
-                        <p>3+ Years</p>
+                    <div class="hero-image">
+                        <img src="ChatGPT Image May 2, 2025, 05_03_10 PM.png" alt="Sohaib, Owner of CoolBrain Studio" class="profile-img" loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video">
-        <div class="container">
-            <h2>Watch My Work 🎥</h2>
-            <div class="video-container card">
-                <iframe src="https://www.youtube.com/embed/BSEBn57gWDo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div style="text-align: center;">
-                <a href="https://www.youtube.com/@PrimeNext/shorts" target="_blank" class="btn btn-primary">Visit Channel</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-card card">
-                    <div class="skill-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Video Editing</h3>
-                    <p>CapCut, DaVinci Resolve, VN</p>
-                </div>
-                <div class="skill-card card">
-                    <div class="skill-icon">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <h3>Thumbnail Design</h3>
-                    <p>Photoshop, Canva, Figma</p>
-                </div>
-                <div class="skill-card card">
-                    <div class="skill-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Logo Design & Branding</h3>
-                    <p>Creating memorable brand identities</p>
-                </div>
-                <div class="skill-card card">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI Tools</h3>
-                    <p>ChatGPT, FlexClip, Midjourney etc.</p>
-                </div>
-                <div class="skill-card card">
-                    <div class="skill-icon">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <h3>YouTube Strategy</h3>
-                    <p>Trends, SEO, Growth tactics</p>
-                </div>
-                <div class="skill-card card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Creating modern portfolio sites</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="projects-container">
-                <div class="project-card card">
-                    <img src="shorts.jpg" alt="YouTube Shorts Edits" class="project-img">
-                    <div class="project-overlay">
-                        <h3>YouTube Shorts Edits</h3>
-                        <p>Engaging short-form content edits</p>
-                    </div>
-                </div>
-                <div class="project-card card">
-                    <img src="images/p6ix00q9ujnuws0btbjr.png" alt="Viral Thumbnail Designs" class="project-img">
-                    <div class="project-overlay">
-                        <h3>Viral Thumbnail Designs</h3>
-                        <p>High CTR thumbnails for creators</p>
-                    </div>
-                </div>
-                <div class="project-card card">
-                    <img src="images/20250413_181926.jpg" alt="Brand Logos" class="project-img">
-                    <div class="project-overlay">
-                        <h3>Brand Logos</h3>
-                        <p>Unique brand identities</p>
+        </section>
+        <section id="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">About Me</h2>
+                <div class="about-content">
+                    <article class="about-text card">
+                        <p>Self-taught video editor and designer helping influencers and YouTubers build strong visual content through thumbnails, videos, logos, and websites like this.</p>
+                    </article>
+                    <div class="about-cards">
+                        <div class="about-card card">
+                            <i class="fas fa-birthday-cake" aria-hidden="true"></i>
+                            <h3>Age</h3>
+                            <p>17</p>
+                        </div>
+                        <div class="about-card card">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <h3>Location</h3>
+                            <p>West Bengal, India</p>
+                        </div>
+                        <div class="about-card card">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <h3>Interests</h3>
+                            <p>Editing | Designing | Music | Gaming | Websites</p>
+                        </div>
+                        <div class="about-card card">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <h3>Experience</h3>
+                            <p>3+ Years</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Presence Section -->
-    <section id="presence">
-        <div class="container">
-            <h2>My Online Presence</h2>
-            <div class="presence-container">
-                <a href="https://www.youtube.com/@coolbrainboy" target="_blank" class="presence-card card">
-                    <i class="fab fa-youtube"></i>
-                    <div>
-                        <h3>CoolBrainBoy</h3>
-                        <p>YouTube Channel</p>
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/@The_SecretShadow" target="_blank" class="presence-card card">
-                    <i class="fab fa-youtube"></i>
-                    <div>
-                        <h3>Secret Shadow</h3>
-                        <p>YouTube Channel</p>
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/@PrimeNext" target="_blank" class="presence-card card">
-                    <i class="fab fa-youtube"></i>
-                    <div>
-                        <h3>PrimeNext</h3>
-                        <p>YouTube Channel</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-form card">
-                <form id="form" action="https://formspree.io/f/xblogglp" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-                <div id="success-message" class="success-message">
-                    <p>Thanks! I'll get back to you shortly.</p>
+        </section>
+        <section id="video" aria-labelledby="video-title">
+            <div class="container">
+                <h2 id="video-title">Watch My Work 🎥</h2>
+                <div class="video-container card">
+                    <iframe src="https://www.youtube.com/embed/BSEBn57gWDo" title="CoolBrain Studio Work Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://www.youtube.com/@PrimeNext/shorts" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Visit Channel</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+        </section>
+        <section id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-card card">
+                        <div class="skill-icon">
+                            <i class="fas fa-film" aria-hidden="true"></i>
+                        </div>
+                        <h3>Video Editing</h3>
+                        <p>CapCut, DaVinci Resolve, VN</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                        </div>
+                        <h3>Thumbnail Design</h3>
+                        <p>Photoshop, Canva, Figma</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon">
+                            <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                        </div>
+                        <h3>Logo Design & Branding</h3>
+                        <p>Creating memorable brand identities</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <h3>AI Tools</h3>
+                        <p>ChatGPT, FlexClip, Midjourney etc.</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </div>
+                        <h3>YouTube Strategy</h3>
+                        <p>Trends, SEO, Growth tactics</p>
+                    </div>
+                    <div class="skill-card card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p>Creating modern portfolio sites</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title">My Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card card">
+                        <img src="shorts.jpg" alt="YouTube Shorts Edits by CoolBrain Studio" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>YouTube Shorts Edits</h3>
+                            <p>Engaging short-form content edits</p>
+                        </div>
+                    </div>
+                    <div class="project-card card">
+                        <img src="images/p6ix00q9ujnuws0btbjr.png" alt="Viral Thumbnail Designs by CoolBrain Studio" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Viral Thumbnail Designs</h3>
+                            <p>High CTR thumbnails for creators</p>
+                        </div>
+                    </div>
+                    <div class="project-card card">
+                        <img src="images/20250413_181926.jpg" alt="Brand Logos by CoolBrain Studio" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Brand Logos</h3>
+                            <p>Unique brand identities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="presence" aria-labelledby="presence-title">
+            <div class="container">
+                <h2 id="presence-title">My Online Presence</h2>
+                <div class="presence-container">
+                    <a href="https://www.youtube.com/@coolbrainboy" target="_blank" class="presence-card card" rel="noopener noreferrer">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <div>
+                            <h3>CoolBrainBoy</h3>
+                            <p>YouTube Channel</p>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@The_SecretShadow" target="_blank" class="presence-card card" rel="noopener noreferrer">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <div>
+                            <h3>Secret Shadow</h3>
+                            <p>YouTube Channel</p>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@PrimeNext" target="_blank" class="presence-card card" rel="noopener noreferrer">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <div>
+                            <h3>PrimeNext</h3>
+                            <p>YouTube Channel</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Get In Touch</h2>
+                <div class="contact-form card">
+                    <form id="form" action="https://formspree.io/f/xblogglp" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Your Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Your Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Your Message</label>
+                            <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="success-message" class="success-message">
+                        <p>Thanks! I'll get back to you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="container">
             <p class="footer-text">© 2025 <span>Sohaib</span> – CoolBrain Studio. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/privacy-policy.html">Privacy Policy</a> |
+                <a href="/dmca.html">DMCA Notice</a>
+            </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
     <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </div>
-
-    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        // Mobile Navigation
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         const links = document.querySelectorAll('.nav-links a');
-
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.innerHTML = navLinks.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
-
         links.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
-
-        // Header Scroll Effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
-
-        // Back to Top Button
         const backToTopBtn = document.querySelector('.back-to-top');
-
         window.addEventListener('scroll', () => {
             backToTopBtn.classList.toggle('active', window.scrollY > 300);
         });
-
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-
-        // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -966,16 +876,11 @@
                 }
             });
         });
-
-        // Form Submission
         const form = document.getElementById('form');
         const successMessage = document.getElementById('success-message');
-
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
             const formData = new FormData(form);
-            
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
@@ -984,7 +889,6 @@
                         'Accept': 'application/json'
                     }
                 });
-                
                 if (response.ok) {
                     form.reset();
                     successMessage.style.display = 'block';
@@ -996,8 +900,6 @@
                 console.error('Error:', error);
             }
         });
-
-        // Particles.js Configuration
         particlesJS('particles-js', {
             "particles": {
                 "number": {
@@ -1103,43 +1005,16 @@
             },
             "retina_detect": true
         });
-
-        // Disable right click
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        // Disable keyboard shortcuts for copy/cut/paste
-        document.addEventListener('keydown', function(e) {
-            // Disable Ctrl+C, Ctrl+X, Ctrl+V
-            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'v' || e.key === 'V')) {
-                e.preventDefault();
-            }
-            // Disable Ctrl+A (Select All)
-            if (e.ctrlKey && e.key === 'a') {
-                e.preventDefault();
-            }
-        });
-    </script>
-
-    <script>
-        // Enhanced Protection Script
         document.addEventListener('DOMContentLoaded', function() {
-            // Disable text selection
             document.body.style.userSelect = 'none';
             document.body.style.webkitUserSelect = 'none';
             document.body.style.mozUserSelect = 'none';
             document.body.style.msUserSelect = 'none';
-            
-            // Disable right click
             document.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
                 showCopyrightNotice();
             });
-            
-            // Disable keyboard shortcuts
             document.addEventListener('keydown', function(e) {
-                // Disable Ctrl+C, Ctrl+X, Ctrl+A, Ctrl+V
                 if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || 
                                  e.key === 'x' || e.key === 'X' || 
                                  e.key === 'a' || e.key === 'A' || 
@@ -1148,20 +1023,14 @@
                     showCopyrightNotice();
                 }
             });
-            
-            // Show notice on selection
             document.addEventListener('selectionchange', function() {
                 if (window.getSelection().toString().length > 0) {
                     showCopyrightNotice();
                     window.getSelection().removeAllRanges();
                 }
             });
-            
-            // Copyright notice function
             function showCopyrightNotice() {
-                // Check if notice already exists
                 if (document.getElementById('copyright-notice')) return;
-                
                 const notice = document.createElement('div');
                 notice.id = 'copyright-notice';
                 notice.style.position = 'fixed';
@@ -1176,9 +1045,7 @@
                 notice.style.border = '1px solid var(--primary)';
                 notice.style.animation = 'fadeIn 0.3s ease';
                 notice.innerHTML = '© Content protected. Please contact for permissions.';
-                
                 document.body.appendChild(notice);
-                
                 setTimeout(() => {
                     notice.style.opacity = '0';
                     notice.style.transition = 'opacity 1s ease';
@@ -1187,8 +1054,6 @@
                     }, 1000);
                 }, 3000);
             }
-            
-            // Add CSS for images
             const style = document.createElement('style');
             style.innerHTML = `
                 img {
