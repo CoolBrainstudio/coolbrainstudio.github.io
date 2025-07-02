@@ -1,62 +1,24 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="google-site-verification: google3304955b81bf9007.html" />
     <title>Privacy Policy | CoolBrain Studio</title>
     <meta name="description" content="Read the Privacy Policy for CoolBrain Studio to understand how we collect, use, and protect your personal information.">
     <meta name="keywords" content="privacy policy, CoolBrain Studio, data protection, Sohaib">
     <meta name="author" content="Sohaib">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.coolbrainstudio.github.io/privacy-policy.html">
+    <link rel="canonical" href="https://coolbrainstudio.github.io/privacy-policy.html">
     <meta property="og:title" content="Privacy Policy | CoolBrain Studio">
     <meta property="og:description" content="Learn how CoolBrain Studio handles your personal information in our Privacy Policy.">
-    <meta property="og:image" content="https://www.coolbrainstudio.github.io/images/profile-img.jpg">
-    <meta property="og:url" content="https:/www.coolbrainstudio.github.io/privacy-policy.html">
+    <meta property="og:image" content="https://coolbrainstudio.github.io/images/profile-img.jpg">
+    <meta property="og:url" content="https://coolbrainstudio.github.io/privacy-policy.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy | CoolBrain Studio">
     <meta name="twitter:description" content="Learn how CoolBrain Studio handles your personal information in our Privacy Policy.">
-    <meta name="twitter:image" content="https://www.coolbrainstudio.com/images/profile-img.jpg">
+    <meta name="twitter:image" content="https://coolbrainstudio.github.io/images/profile-img.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -147,11 +109,6 @@
             }
         }
     </style>
-</head>
-        <head>
-    <!-- Existing meta tags -->
-    <meta name="google-site-verification" content="google-site-verification: google3304955b81bf9007.html" />
-    <!-- Rest of your head content -->
 </head>
 <body>
     <section>
