@@ -1,0 +1,41 @@
+#work-categories {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f9; /* Light background */
+}
+
+.category-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.category-card {
+    text-decoration: none; /* Remove underline from the link */
+    color: #333;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #007bff; /* A distinct color for the title */
+}
