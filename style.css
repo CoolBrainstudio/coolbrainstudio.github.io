@@ -1,57 +1,105 @@
-/* --- Styling the Explore My Work Section --- */
+/* -------------------------------------- */
+/* Global & Consistency Styles */
+/* -------------------------------------- */
 
-#work-categories {
-    padding: 60px 20px;
-    /* Optional: If you want to center the content under the heading */
-    /* text-align: center; */ 
+body {
+    /* Ensure the body background is the same dark black */
+    background-color: #000000; 
+    color: #f0f0f0; /* Light gray text for readability */
+    font-family: sans-serif; /* Use a readable font */
 }
 
-.category-cards-container {
-    /* Use Flexbox to arrange the cards nicely in a row */
-    display: flex;
-    justify-content: flex-start; /* Start cards from the left */
-    gap: 30px; /* Space between the cards */
-    margin-top: 40px;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
-    padding-left: 0; /* Ensures the cards start flush with the section */
+h1, h2, h3 {
+    color: #00bcd4; /* Use the same bright cyan accent for headings */
 }
 
-/* --- Styling for each individual Category Card (the <a> link) --- */
+/* Style for the 'Back to Main Portfolio' link */
+.back-link {
+    color: #b0b0b0; /* Light gray link color */
+    text-decoration: none;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
 
-.category-card {
-    /* Set the card's visual properties */
-    text-decoration: none; /* Crucial: Removes the default link underline */
-    color: #fff; /* Text color for the card */
-    background-color: #1a1a1a; /* A slightly lighter black for the card background */
-    border: 1px solid #333; /* A subtle border to define the edge */
-    border-radius: 8px; /* Slightly rounded corners */
+.back-link:hover {
+    color: #00bcd4; /* Accent color on hover */
+}
+
+/* -------------------------------------- */
+/* Video Gallery UI (long_videos.html) */
+/* -------------------------------------- */
+
+.video-gallery {
+    padding: 20px;
+    /* Use CSS Grid for a clean, responsive layout */
+    display: grid;
+    /* Two columns by default, allowing them to shrink */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px; /* Space between video items */
+    max-width: 1200px; /* Keep the content centered and readable */
+    margin: 0 auto;
+}
+
+.video-item {
+    /* Style for each video's card/container */
+    background-color: #1a1a1a; /* Darker card background */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 10px;
     padding: 25px;
-    width: 300px; /* Set a fixed width for consistency */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-    
-    /* Make the card look clickable and interactive */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
-.category-card:hover {
-    transform: translateY(-5px); /* Lift the card slightly on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow for emphasis */
-    background-color: #2c2c2c; /* Slightly brighter on hover */
-    cursor: pointer; /* Change mouse pointer to indicate clickability */
+.video-item:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
 }
 
-/* --- Styling the content inside the card --- */
-
-.category-card h3 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 1.4em;
-    color: #00bcd4; /* Use a bright color that stands out against the dark background */
+.video-title {
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-.category-card p {
-    font-size: 0.9em;
-    color: #b0b0b0; /* Light gray for the description text */
-    margin: 0;
+.video-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Making the embedded video responsive */
+.video-embed-container {
+    position: relative;
+    width: 100%;
+    /* Standard 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin-bottom: 15px;
+}
+
+.video-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Styling the Direct Message Button */
+.contact-button {
+    display: inline-block;
+    background-color: #00bcd4; /* The bright cyan accent color */
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.contact-button:hover {
+    background-color: #00e5ff; /* A slightly lighter cyan on hover */
+    transform: scale(1.02);
 }
