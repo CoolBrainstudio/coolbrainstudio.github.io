@@ -1,41 +1,57 @@
+/* --- Styling the Explore My Work Section --- */
+
 #work-categories {
     padding: 60px 20px;
-    text-align: center;
-    background-color: #f4f4f9; /* Light background */
+    /* Optional: If you want to center the content under the heading */
+    /* text-align: center; */ 
 }
 
 .category-cards-container {
+    /* Use Flexbox to arrange the cards nicely in a row */
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: flex-start; /* Start cards from the left */
+    gap: 30px; /* Space between the cards */
     margin-top: 40px;
-    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+    padding-left: 0; /* Ensures the cards start flush with the section */
 }
 
+/* --- Styling for each individual Category Card (the <a> link) --- */
+
 .category-card {
-    text-decoration: none; /* Remove underline from the link */
-    color: #333;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 30px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Set the card's visual properties */
+    text-decoration: none; /* Crucial: Removes the default link underline */
+    color: #fff; /* Text color for the card */
+    background-color: #1a1a1a; /* A slightly lighter black for the card background */
+    border: 1px solid #333; /* A subtle border to define the edge */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 25px;
+    width: 300px; /* Set a fixed width for consistency */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    
+    /* Make the card look clickable and interactive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .category-card:hover {
-    transform: translateY(-5px); /* Lift the card slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow for emphasis */
+    background-color: #2c2c2c; /* Slightly brighter on hover */
+    cursor: pointer; /* Change mouse pointer to indicate clickability */
 }
 
-.card-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
+/* --- Styling the content inside the card --- */
 
 .category-card h3 {
-    margin-top: 0;
-    font-size: 1.5em;
-    color: #007bff; /* A distinct color for the title */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    color: #00bcd4; /* Use a bright color that stands out against the dark background */
+}
+
+.category-card p {
+    font-size: 0.9em;
+    color: #b0b0b0; /* Light gray for the description text */
+    margin: 0;
 }
